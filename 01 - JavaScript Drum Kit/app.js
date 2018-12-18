@@ -13,8 +13,15 @@ document.addEventListener('DOMContentLoaded', () => {
     audio.play()
   }
 
+  function transition(e){
+    const key = document.querySelector(`div.key[data-key = "${e.keyCode}"]`)
+    if(!key) return
+    key.classList.add('playing')
+  }
+
   // Event Listener on document that passes the keyup event to the playSound function
   document.addEventListener('keyup', (e) => {
     playSound(e)
+    transition(e)
   })
 })
