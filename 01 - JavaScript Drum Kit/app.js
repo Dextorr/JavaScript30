@@ -24,4 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
     playSound(e)
     transition(e)
   })
+
+  keyDivs.forEach(key => {
+    key.addEventListener('transitionend', () => {
+      key.classList.remove('playing')
+    })
+  })
+
 })
