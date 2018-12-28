@@ -48,3 +48,12 @@ body {
   transition: all 0.5s;
   transition-timing-function: cubic-bezier(0, 1.96, 0.26, 0.74);
 }
+
+.hand.second-hand {
+  background: #f00;
+}
+
+.hand.hour-hand {
+  width: 30%;
+  margin-left: 20%;
+}
