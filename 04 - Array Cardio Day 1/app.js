@@ -31,7 +31,7 @@ const born1500s = inventors.filter((inventor) => {
 console.log(born1500s)
 // Array.prototype.map()
 // 2. Give us an array of the inventors' first and last names
-const names = inventors.map((inventor) => {
+const names = inventors.map(inventor => {
   return `${inventor.first} ${inventor.last}`
 })
 console.log(names)
@@ -43,7 +43,11 @@ const sortedBirth = inventors.sort((a, b) => {
 console.log(sortedBirth)
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live?
-
+const yearsLived = inventors.reduce((result, inventor) => {
+  result[`${inventor.first} ${inventor.last}`] = inventor.passed - inventor.year
+  return result
+}, {})
+console.log(yearsLived)
 // 5. Sort the inventors by years lived
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
