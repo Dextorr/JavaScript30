@@ -49,7 +49,10 @@ const yearsLived = inventors.reduce((result, inventor) => {
 }, {})
 console.log(yearsLived)
 // 5. Sort the inventors by years lived
-
+const sortedAge = inventors.sort((a, b) => {
+  return (a.passed - a.year) - (b.passed - b.year)
+})
+console.log(sortedAge)
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
