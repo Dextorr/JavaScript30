@@ -17,7 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Some and Every Checks
   // Array.prototype.some() // is at least one person 19 or older?
+  const someAge = people.some(person => 2018-person.year>=19)
+  console.log(someAge)
   // Array.prototype.every() // is everyone 19 or older?
+  const everyAge = people.every(person => 2018-person.year>=19)
+  console.log(everyAge)
 
   // Array.prototype.find()
   // Find is like filter, but instead returns just the one you are looking for
